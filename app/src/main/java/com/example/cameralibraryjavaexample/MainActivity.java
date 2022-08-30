@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
                             cropBitmap.recycle();
                         }
 
+                        // Bitmap 저장.
+                        // isPublicDirectory: true: 공용저장소, false: 개별저장소.
+                        String resizeImageUri = BitmapHelper.save(
+                                getBaseContext(), resizeBitmap, true);
+
                         // Base64로 인코딩 된 문자열 반환.
                         String base64 = BitmapHelper.toBase64(resizeBitmap);
 
