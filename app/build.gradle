@@ -44,5 +44,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // AutoDataBank CameraLibrary.
-    implementation 'com.github.autodatabank:camera-library:1.0.9'
+    implementation 'com.github.autodatabank:camera-library:1.0.10'
 }
