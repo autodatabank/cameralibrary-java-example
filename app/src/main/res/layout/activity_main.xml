@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,28 +25,77 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageview"
         app:layout_constraintEnd_toEndOf="@+id/imageview"
         />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_mileage_shoot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
     <!-- 한 장 촬영. -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_one_shoot"
-        android:layout_width="240dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_margin="16dp"
-        android:text="한장촬영"
+        android:text="한장"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_multiple_shoot"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_multiple_shoot"
         app:layout_constraintStart_toStartOf="parent"
         />
     <!-- 여러장 촬영. -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_multiple_shoot"
-        android:layout_width="240dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_margin="16dp"
-        android:text="여러장촬영"
+        android:text="여러장"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_one_shoot"
+        />
+    <!-- 차량번호 촬영. -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_vehicle_number_shoot"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="TEST"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_shoot"
+        app:layout_constraintEnd_toStartOf="@+id/button_mileage_shoot"
         app:layout_constraintStart_toStartOf="parent"
+        />
+    <!-- 주행거리 촬영. -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_mileage_shoot"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="주행거리"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_shoot"
+        app:layout_constraintEnd_toStartOf="@+id/button_vin_number_shoot"
+        app:layout_constraintStart_toEndOf="@+id/button_vehicle_number_shoot"
+        />
+    <!-- 차대번호 촬영. -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_vin_number_shoot"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="차대번호"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_shoot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_mileage_shoot"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
