@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import kr.co.kadb.cameralibrary.presentation.CameraIntent;
 import kr.co.kadb.cameralibrary.presentation.model.CropSize;
-import kr.co.kadb.cameralibrary.presentation.widget.util.BitmapHelper;
 import kr.co.kadb.cameralibrary.presentation.widget.util.IntentKey;
 import kr.co.kadb.cameralibrary.presentation.widget.util.UriHelper;
 
@@ -37,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
                         // 이미지 URI.
                         Uri imageUri = intent.getData();
                         // 이미지 가로.
-                        int imageWidth = intent.getIntExtra(IntentKey.EXTRA_WIDTH, 0);
+                        //int imageWidth = intent.getIntExtra(IntentKey.EXTRA_WIDTH, 0);
                         // 이미지 세로.
-                        int imageHeight = intent.getIntExtra(IntentKey.EXTRA_HEIGHT, 0);
+                        //int imageHeight = intent.getIntExtra(IntentKey.EXTRA_HEIGHT, 0);
                         // 이미지 방향.
-                        int imageRotation = intent.getIntExtra(IntentKey.EXTRA_ROTATION, 0);
+                        //int imageRotation = intent.getIntExtra(IntentKey.EXTRA_ROTATION, 0);
                         // 썸네일 Bitmap.
-                        Bitmap thumbnailBitmap = (Bitmap) intent.getExtras().get("data");
+                        //Bitmap thumbnailBitmap = (Bitmap) intent.getExtras().get("data");
 
                         // Uri를 이미지로 변환.
                         Bitmap bitmap = UriHelper.toBitmap(getBaseContext(), imageUri);
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         );*/
 
                         // 가로, 세로 중 큰 길이를 640(pixel)에 맞춰 비율 축소.
-                        Bitmap resizeBitmap = BitmapHelper.resize(bitmap, 640);
+                        //Bitmap resizeBitmap = BitmapHelper.resize(bitmap, 640);
                         // 가로, 세로 중 큰 길이를 640(pixel)에 가깝게(640이상 ~ 1280미만) 맞춰 비율 축소.
                         // 예) resizePixcel이 640인 경우 결과는 640이상 ~ 1280미만.
                         // 성능 및 좋은 샘플링으로 이미지를 추출.
@@ -69,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
                                 getBaseContext(), resizeBitmap, true);*/
 
                         // Base64로 인코딩 된 문자열 반환.
-                        String base64 = BitmapHelper.toBase64(resizeBitmap);
-                        ((TextView) findViewById(R.id.textview)).setText(base64);
+                        /*String base64 = BitmapHelper.toBase64(resizeBitmap);
+                        ((TextView) findViewById(R.id.textview)).setText(base64);*/
 
                         // 촬영 원본 이미지.
                         ((ImageView) findViewById(R.id.imageview)).setImageURI(imageUri);
                         // 촬영 원본을 크롭 및 리사이즈한 이미지.
-                        ((ImageView) findViewById(R.id.imageview_thumbnail)).setImageBitmap(resizeBitmap);
+                        //((ImageView) findViewById(R.id.imageview_thumbnail)).setImageBitmap(resizeBitmap);
                     } else if (IntentKey.ACTION_TAKE_MULTIPLE_PICTURES.equals(intent.getAction())) {
                         // 여러장.
                     } else if (IntentKey.ACTION_DETECT_MILEAGE_IN_PICTURES.equals(intent.getAction()) ||
