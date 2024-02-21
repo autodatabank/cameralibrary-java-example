@@ -9,8 +9,8 @@ android {
         applicationId "com.example.cameralibraryjavaexample"
         minSdk 21
         targetSdk 34
-        versionCode 10114
-        versionName "1.1.14"
+        versionCode 10120
+        versionName "1.1.20"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -53,5 +53,5 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     // AutoDataBank CameraLibrary.
-    implementation 'com.github.autodatabank:camera-library:1.1.14'
+    implementation 'com.github.autodatabank:camera-library:1.1.20'
 }
