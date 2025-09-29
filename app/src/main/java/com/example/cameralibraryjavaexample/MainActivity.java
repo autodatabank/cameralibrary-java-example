@@ -15,15 +15,16 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import kr.co.kadb.cameralibrary.presentation.CameraIntent;
-import kr.co.kadb.cameralibrary.presentation.model.CropSize;
 import kr.co.kadb.cameralibrary.presentation.widget.util.IntentKey;
 import kr.co.kadb.cameralibrary.presentation.widget.util.UriHelper;
 
 public class MainActivity extends AppCompatActivity {
-    private final CropSize cropSize = new CropSize(0.7f, 0.5f);
+
+    // Crop Size.
+    //private final CropSize cropSize = new CropSize(0.7f, 0.5f);
 
     // Activity for result.
-    // Example 2. 3. 의 결과 수신.
+    // Example 2, 3.
     private final ActivityResultLauncher<Intent> mResultLauncher = registerForActivityResult(
             new StartActivityForResult(), result -> {
                 if (result.getResultCode() == Activity.RESULT_OK) {
@@ -139,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     .setCanMute(false) // 단말 음소거 시 셔터 무음.
                     .setHasHorizon(true) // 미리보기 화면에 수평선 표시.
                     //.setCropPercent(cropPercent) // 크롭 영역 설정(Deprecated).
-                    .setCropSize(cropSize) // 크롭 영역 설정.
+                    //.setCropSize(cropSize) // 크롭 영역 설정(Deprecated).
                     .setCanUiRotation(true) // 회전 가능.
                     .setHorizonColor(Color.RED) // 수평선 색상.
                     .setUnusedAreaBorderColor(Color.GREEN) // 크롭 인 라인 색상.

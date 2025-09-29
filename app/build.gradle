@@ -3,14 +3,14 @@ plugins {
 }
 
 android {
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.cameralibraryjavaexample"
         minSdk 21
-        targetSdk 34
-        versionCode 10120
-        versionName "1.1.20"
+        targetSdk 36
+        versionCode 10124
+        versionName "1.1.24"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,15 +43,11 @@ android {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
     // Jetpack.
-    implementation 'androidx.core:core-ktx:1.12.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
 
     // AutoDataBank CameraLibrary.
-    implementation 'com.github.autodatabank:camera-library:1.1.20'
+    implementation 'com.github.autodatabank:camera-library:1.1.24'
 }
